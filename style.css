@@ -1,0 +1,185 @@
+/*Reset CSS*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+html,
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+a,
+button {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+  /* background-color: transparent; */
+}
+
+img {
+  max-width: 20%;
+  height: auto;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+/*End of Reset CSS*/
+
+body {
+  background-color: #f4f4f4;
+  margin: 20px;
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}
+
+.header {
+  display: grid;
+  grid-area: header;
+  grid-template-areas: 'main-title header-menu';
+  grid-template-columns: 3fr 1fr;
+}
+
+.main-title {
+  display: grid;
+  grid-template-areas: 'header-logo header-title';
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.header-logo {
+  grid-area: header-logo;
+  justify-self: right;
+}
+
+.header-title {
+  grid-area: header-title;
+}
+
+.header-menu {
+  display: grid;
+  grid-area: header-menu;
+  place-self: center end;
+}
+
+a {
+  padding: 0.3em;
+}
+
+a:hover {
+  background-color: #7df;
+}
+
+.main {
+  display: grid;
+  grid-area: main;
+  grid-template-columns: auto auto auto;
+  margin: 2em auto;
+  gap: 2em 2em;
+}
+
+.footer {
+  display: grid;
+  grid-area: footer;
+  margin: 2em auto;
+}
+
+.footer-title {
+  text-align: center;
+}
+
+.redes {
+  text-align: center;
+  padding: 1em;
+}
+
+.redes td,
+.redes th {
+  padding: 0.5em;
+}
+
+.card {
+  display: grid;
+  grid-row: auto auto auto;
+  border: solid 2px #339;
+}
+
+.card figure {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.card figure img,
+.card figure figcaption {
+  place-self: start center;
+}
+
+.card figure details {
+  place-self: end left;
+}
+
+.products article,
+.aside article,
+.card {
+  box-shadow: 10px 10px 5px #777;
+  border-radius: 10px;
+  padding: 1em 0.3em;
+  margin: 1em;
+}
+
+.form {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 0.7em;
+}
+
+.form input,
+.form textarea {
+  /* border-bottom: 2px dashed #333; */
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.custom-file-upload,
+.button {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover,
+.custom-file-upload:hover {
+  background-color: #1df;
+}
+
+.button:active,
+.custom-file-upload:active {
+  background-color: #339;
+  color: #f4f4f4;
+}

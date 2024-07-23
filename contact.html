@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="icon.svg" type="image/svg+xml" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/" class="main-title">
+        <img src="./icon.svg" alt="logo compañía" class="header-logo" />
+        <h1 class="header-title">Sitio de Prueba</h1>
+      </a>
+      <nav class="header-menu">
+        <ul>
+          <li><a href="./about.html">acerca del sitio</a></li>
+          <li>
+            <details>
+              <summary><a href="./services.html">servicios</a></summary>
+              <ol>
+                <li><a href="./services/webdesign.html">Diseño Web</a></li>
+                <li><a href="./services/botsdesign.html">Diseño de bots</a></li>
+                <li>
+                  <a href="./services/webappsdev.html"
+                    >Desarrollo de web apps</a
+                  >
+                </li>
+              </ol>
+            </details>
+          </li>
+          <li><a href="./contact.html">contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <h2>Formulario de contacto</h2>
+      <form action="/" method="post" class="form">
+        <legend>Escriba sus datos para contactarlo</legend>
+        <div>
+          <input
+            type="text"
+            placeholder="ingrese su nombre"
+            name="nombre"
+            id="nombre"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="ingrese su email"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            placeholder="ingrese su nro de tel"
+          />
+        </div>
+        <div>
+          <textarea
+            rows="10"
+            cols="30"
+            maxlength="300"
+            name="comentario"
+            id="comentario"
+            placeholder="escriba su solicitud"
+          ></textarea>
+          <div>
+            <label class="custom-file-upload">
+              adjuntar captura:
+              <input type="file" name="attach" id="attach" />
+            </label>
+          </div>
+        </div>
+        <div>
+          <button class="button" name="enviar" id="enviar">enviar</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

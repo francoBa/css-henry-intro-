@@ -1,0 +1,84 @@
+/* reset CSS*/
+/* Aplica un margen y padding de 0 a todos los elementos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Establece una fuente y color de texto para todos los elementos */
+* {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+/*fix body view to 100% on device*/
+html,
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+/* Estilo heredado para los enlaces*/
+a,
+button {
+  text-decoration: none;
+  color: inherit;
+}
+/* Imagen al 100% y alto automático*/
+img {
+  width: 100%;
+  height: auto;
+}
+/* Ningún estilo para las listas */
+ul,
+ol {
+  list-style: none;
+}
+/* end of reset CSS*/
+
+.fondo {
+  background-color: red;
+}
+
+.miTexto {
+  font-size: 2.8em;
+  color: green;
+}
+
+[class~='container'] {
+  display: grid;
+}
+
+/* Selecciona todos los elementos cuyo atributo rel contiene la palabra "noopener" */
+[rel~='noopener'] {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* Selecciona todos los enlaces cuyo atributo href comienza con "https" */
+a[href^='https'] {
+  color: green;
+  font-weight: bold;
+}
+
+/* Selecciona todos los elementos input cuyo atributo name comienza con "user" */
+input[name^='user'] {
+  border: 2px solid blue;
+  background-color: #f9f9f9;
+}
+
+/* Selecciona todos los elementos cuyo atributo class termina con "button" */
+[class$='button'] {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Selecciona todos los elementos cuyo atributo class contiene "featured" */
+[class*='featured'] {
+  border: 2px dashed green;
+  padding: 10px;
+}
